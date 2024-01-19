@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        /* Adjust the height of the textarea */
+        #projectDescription {
+            height: 150px; /* You can adjust this value as needed */
+        }
+    </style>
+    <title>Allocate Students to Projects</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+         <br />Allocate Students to Projects
+        <span style="color: hsl(140, 98%, 51%)"></span>
+    </h1>
+    <main>
+        <!-- Form to manage project topics -->
+        <form action="/manage-projects" method="post">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" name="projectName" required>
+
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" name="projectDescription" required></textarea>
+
+            <!-- Additional field for allocating students to projects -->
+            <label for="allocatedStudents">Allocate Students:</label>
+            <select id="allocatedStudents" name="allocatedStudents" multiple>
+                <!-- Add options dynamically based on available students -->
+                <option value="student1">Student 1</option>
+                <option value="student2">Student 2</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Add other fields as needed for editing and deleting -->
+
+            <button type="submit">Add Project</button>
+            <button type="button" class="edit">Edit Project</button>
+            <button type="button" class="delete">Delete Project</button>
+        </form>
+    </main>
+</div>
+
+</body>
+</html>

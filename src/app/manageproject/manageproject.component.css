@@ -1,0 +1,129 @@
+/* manageproject.component.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the container */
+.container {
+    margin-top: 50px;
+}
+
+/* Style the table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Style the table headers */
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Style the buttons inside the table */
+.table button {
+    margin-right: 5px;
+}
+
+/* Style the button icons */
+.btn i {
+    margin-right: 5px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+    }
+}
+
+
+/* sidenav.css */
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    background: #fff;
+    width: 200px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none; /* Add this line to remove the underline */
+}
+
+nav .fas {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    display: none;
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+nav:hover .nav-item {
+    display: block;
+}
+
+a:hover {
+    background: #eee;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+}

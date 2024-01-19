@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admindash.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       header {
+            font-weight: bold;
+            margin-bottom: 20px; /* Adjust the value as needed */
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .col-sm-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <header>
+                <a href="/admindash">
+                    <span class="nav-item">Admin Dashboard</span>
+                </a>
+            </header>
+            <a href="/manageproject">
+                <i class="fas fa-tasks"></i>
+                <span class="nav-item">Manage Project</span>
+            </a>
+            <a href="/managementor">
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+                <span class="nav-item">Manage <br> Mentor</span>
+            </a>
+            <a href="/managestudent">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="nav-item">Manage Student</span>
+            </a>
+            <a href="#" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Log out</span>
+            </a>
+        </nav>
+
+        <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+            <header>
+                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+                    Admin <br />
+                    <span style="color: hsl(187, 100%, 81%)">Dashboard</span>
+                </h1>
+            </header>
+
+            <!-- Add d-flex justify-content-center class to center the cards -->
+            <div class="container d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Manage Student</h5>
+                                <p class="card-text">Registration <br>Allocate Students to Projects</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="/managestudent" class="btn btn-primary">Click</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="/studentsignup" class="btn btn-primary">Sign Up</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Manage Project</h5>
+                                <p class="card-text">Add <br>Edit <br>Delete</p>
+                                <a href="/manageproject" class="btn btn-primary">Click here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Manage Mentor</h5>
+                                <p class="card-text">Registration <br>Allocate Mentor to Projects</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="/managementor" class="btn btn-primary">Click</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="/mentorreg" class="btn btn-primary">Sign Up</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Placeholder JavaScript for form submission
+        document.getElementById('mentorForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Implement form submission logic here (e.g., send data to the server)
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
